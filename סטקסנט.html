@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Quest</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Center the container horizontally */
+    @media screen and (max-width: 768px) {
+      .riddle-container {
+        width: 80%;
+        height: 200px;
+        margin-top: 150px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+    }
+    .riddle-container {
+      height: 300px;
+      width: 700px;
+      margin-top: 30px;
+      position: relative; /* Necessary for absolute positioning of buttons */
+      background-image: url('https://i.imgur.com/33ViUDA.jpeg');
+    }
+    h1 {
+      text-align: center;
+    }
+    .hidden-button {
+      position: absolute;
+      background: rgba(0, 0, 0, 0); /* Fully transparent */
+      border: none;
+      cursor: pointer;
+    }
+    /* Adjust these coordinates and sizes to match the folder positions in the image */
+    .button1 {
+      top: 50px; /* Distance from the top of the container */
+      left: 100px; /* Distance from the left of the container */
+      width: 100px; /* Width of the clickable area */
+      height: 100px; /* Height of the clickable area */
+    }
+    .button2 {
+      top: 150px;
+      left: 300px;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>נירקוש</h1>
+  <div class="riddle-container" alt="_ _ _ _ _ z">
+    <a href="http://example1.com" class="hidden-button button1"></a>
+    <a href="https://www.telegraph.co.uk/multimedia/archive/03089/satellite-ALPHABET_3089328k.jpg?imwidth=960" class="hidden-button button2"></a>
+    <a href="http://example1.com" class="hidden-button button1"></a>
+    <a href="http://example2.com" class="hidden-button button2"></a>
+    <a href="http://example1.com" class="hidden-button button1"></a>
+    <a href="http://example2.com" class="hidden-button button2"></a>
+  </div>
+</body>
+</html>

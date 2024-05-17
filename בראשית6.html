@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Quest</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Center the container horizontally */
+    @media screen and (max-width: 768px) {
+      .riddle-container {
+        width: 80%;
+        height: 200px;
+        margin-top: 150px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+      }
+    }
+    .riddle-container {
+      height: 320px;
+      width: 600px;
+      margin-top: 0px;
+      background-image: url('https://i.imgur.com/GfYVX46.jpeg');
+    }
+    h1 {
+      text-align: center;
+      font-size: 50px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 10px;
+    }
+    /* Popup container */
+    .popup-container {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Enable scroll if needed */
+      background-color: #BD4A5F; /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      opacity: 0; /* Initial state is transparent */
+      transition: opacity 4s ease-in-out; /* Fade-in effect */
+    }
+    .popup-content {
+      background-color: #BD4A5F;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      text-align: center;
+      color:#F3EAA2;
+      border-radius: 7px 7px;
+    }
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      color: #F3EAA2;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>נירקוש</h1>
+  <h2>אין סיבה לשגיאה בתאריך יצאתי כפית</h2>
+  <div class="riddle-container">
+    <div class="riddle" alt="bereshit6.jpg - Xibu xbt uif mjnju po nbo's mjgftqbo uibu Hpe jnqptfe cfgpsf uif gmppe?">
+    </div>
+  </div>
+  <div id="popup" class="popup-container">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <p>שומע
+        
+      </p>
+    </div>
+  </div>
+  <script>
+    // Show the popup with a fade-in effect when the page loads
+    window.onload = function() {
+      const popup = document.getElementById('popup');
+      popup.style.display = "block";
+      setTimeout(() => {
+        popup.style.opacity = "1";
+      }, 10); // Small delay to ensure the display change is applied first
+    }
+    
+    // Close the popup when the close button is clicked
+    document.querySelector('.close-btn').onclick = function() {
+      const popup = document.getElementById('popup');
+      popup.style.opacity = "0";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 1000); // Match the transition duration
+    }
+
+    // Close the popup when clicking outside of the popup content
+    window.onclick = function(event) {
+      const popup = document.getElementById('popup');
+      if (event.target == popup) {
+        popup.style.opacity = "0";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 1000); // Match the transition duration
+      }
+    }
+  </script>
+</body>
+</html>
