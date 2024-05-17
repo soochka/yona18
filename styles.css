@@ -56,5 +56,8 @@ body {
     .riddle-container {
       width: 90%;
     }
+      body{
+        font-family:'Secular One' ;
+      }
   }
   
